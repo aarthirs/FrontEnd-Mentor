@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+@media (max-width:699px) {
+    .bg-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin: 0px;
+        background-color: white;
+        padding: 5px;
+    }
+
+    #nextInfoBlock {
+        display: none;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .inner-container {
+        margin: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 10px 10px 8px gray;
+        border-radius: 5px;
+
+
+    }
+
+    .Result-container {
+        background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        border-radius: 8px;
+        color: white;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .heading {
+        text-align: center;
+        color: hsl(241, 100%, 89%);
+    }
+
+    .circle {
+        /* or any width */
+        margin: 0 auto;
+        border-radius: 50%;
+        display: flex;
+
+        justify-content: center;
+        height: 150px;
+        width: 150px;
+        background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        padding: 5px;
+
+    }
+
+    .circleValue {
+        font-weight: bold;
+
+    }
+
+    .secVal {
+        color: hsl(241, 100%, 89%);
+    }
+
+    .descr-con {
+        padding: 5px;
+
+    }
+
+    .SummaryContainer {
+        min-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .reaction-con {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-image: linear-gradient(to right, #B266FF, #6600CC);
+        margin: 5px;
+        padding: 5px;
+        border-radius: 8px;
+        max-height: 70px;
+
+    }
+
+    .reaction-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-self: auto;
+        padding: 5px;
+    }
+
+    .reaction-head {
+        padding: 5px;
+        color: #eee;
+        font-size: 30px;
+    }
+
+    .value {
+        padding: 7px;
+        font-size: 30px;
+
+    }
+
+    .totalVal {
+        color: hsl(224, 30%, 27%);
+    }
+
+    .img {
+        width: 40px;
+        height: 25px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .button {
+        background-color: black;
+        color: white;
+        border-radius: 6px;
+        border-style: none;
+        width: 100px;
+        height: 30px;
+        align-self: center;
+        margin: 5px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 5px;
+    }
+
+
+}
+
+@media (min-width:700px) {
+    .bg-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        margin: 0px;
+        background-color: white;
+        padding: 5px;
+    }
+
+    .inner-container {
+        margin: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: 10px 10px 8px gray;
+        border-radius: 5px;
+
+
+    }
+
+    .Result-container {
+        background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+        border-radius: 8px;
+        color: white;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .heading {
+        text-align: center;
+        color: hsl(241, 100%, 89%);
+    }
+
+    .circle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        padding: 5px;
+        margin: 0 auto;
+
+
+
+    }
+
+    .circleValue {
+        font-weight: bold;
+
+    }
+
+    .secVal {
+        color: hsl(241, 100%, 89%);
+    }
+
+    .descr-con {
+        padding: 5px;
+
+    }
+
+    .SummaryContainer {
+        min-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    .reaction-con {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-image: linear-gradient(to right, #B266FF, #6600CC);
+        margin: 5px;
+        padding: 5px;
+        border-radius: 8px;
+        max-height: 70px;
+
+    }
+
+    .reaction-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-self: auto;
+        padding: 5px;
+    }
+
+    .reaction-head {
+        padding: 5px;
+        color: #eee;
+        font-size: 30px;
+    }
+
+    .value {
+        padding: 7px;
+        font-size: 30px;
+
+    }
+
+    .totalVal {
+        color: hsl(224, 30%, 27%);
+    }
+
+    .img {
+        width: 40px;
+        height: 25px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .button {
+        background-color: black;
+        color: white;
+        border-radius: 6px;
+        border-style: none;
+        width: 100px;
+        height: 30px;
+        align-self: center;
+        padding: 5px;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5px;
+    }
+
+    #nextInfoBlock {
+        display: none;
+    }
+}
