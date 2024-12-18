@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 100%;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 5px;
+            border: 3px solid #ccc;
+         }
+         button[type='submit']{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #04AA6D;
+            width: 100%;
+            color: white;
+         }
+
+         #info-container{
+            display: none;
+            background: #f1f1f1;
+            padding: 4px;
+            margin-top: 5px;
+            margin: 0px;
+          
+         }
+
+         
+         .valid{
+            color: #04AA6D;
+            font-size: 16px;
+
+         }
+
+         .valid:before{
+            position:relative;
+           
+            content:".";
+            
+         }
+
+         .invalid{
+            color: red;
+            font-size: 16px;
+
+         }
+
+         .invalid::before{
+            position:relative;
+           
+            content:".";
+         }
+    </style>
+</head>
+<body>
+   <div id="container">
+    <form action="">
+        <label for="uname">UserName</label>
+        <input type="text" name="uname" id="uname" required>
+        <label for="pwd">Password</label>
+        <input type="password" name="pwd" id="pwd" pattern="(\=.,$\d)(!@[a-z][A-Z]).{8,}" title="there must be atleast 8 char and uppercase lowercase" required>
+        <button type="submit">Submit</button>
+
+    </form>
+
+   </div> 
+
+   <div id="info-container">
+    <h3>password must have:</h3>
+    <p id="charLen" class="invalid">Must have atleast 8 char</p>
+    <p id="digits" class="invalid">Digits[0-9]</p>
+    <p id="uppercase" class="invalid">Uppercase</p>
+    <p id="lowercase" class="invalid">Lowercase</p>
+    
+
+   </div>
+
+   <script>
+       let pwdElement=document.getElementById("pwd");
+       let message=document.getElementById("info-container");
+       let charlength=document.getElementById("charLen");
+       let digits=document.getElementById("digits");
+       let uppercase=document.getElementById("uppercase");
+       let lowercase=document.getElementById("lowercase");
+
+       pwdElement.onfocus=function(){
+        message.style.display="block";
+       }
+
+       pwdElement.onblur=function(){
+        message.style.display="none";
+
+       }
+
+      pwdElement.onkeyup=function(){
+
+        if(pwdElement.value.length <8){
+            charlength.classList.remove('valid')
+            charlength.classList.add("invalid");
+        }
+        else{
+            charlength.classList.remove('invalid')
+            charlength.classList.add("valid");
+        }
+        
+        var number=/[0-9]/g;
+         if(pwdElement.value.match(number)){
+            digits.classList.remove('invalid')
+            digits.classList.add("valid");
+         }
+         else{
+            digits.classList.remove('valid')
+            digits.classList.add("invalid");
+         }
+
+         var lc=/[a-z]/g;
+         if(pwdElement.value.match(lc)){
+            lowercase.classList.remove('invalid')
+            lowercase.classList.add("valid");
+         }
+         else{
+            lowercase.classList.remove('valid')
+            lowercase.classList.add("invalid");
+         }
+
+         var uc=/[A-Z]/g 
+         if(pwdElement.value.match(uc)){
+            uppercase.classList.remove('invalid')
+            uppercase.classList.add("valid");
+         }
+         else{
+            uppercase.classList.remove('valid')
+            uppercase.classList.add("invalid");
+         }
+      }
+
+   </script>
+</body>
+</html>
